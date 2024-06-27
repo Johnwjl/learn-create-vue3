@@ -1,14 +1,17 @@
 <script setup>
+
+import { version } from 'vue'
+
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="20" height="20" />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg=" Learn Vue " :version="` v.${version} `" />
     </div>
   </header>
 
@@ -20,14 +23,16 @@ import TheWelcome from './components/TheWelcome.vue'
 <style scoped>
 header {
   line-height: 1.5;
+  display: flex;
+  place-items: center;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  margin: 20px 0;
+  margin-left: 16px;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   header {
     display: flex;
     place-items: center;
@@ -43,5 +48,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
