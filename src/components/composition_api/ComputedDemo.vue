@@ -1,34 +1,13 @@
 <template>
-    <div class="case">
-        <div class="case-title">
-            ComputedDemo.vue
-            | 本例参阅：
-            <a href="https://cn.vuejs.org/guide/essentials/computed.html" target="_blank" rel="noopener noreferrer">计算属性</a>
-        </div>
+    <div>01:</div>
+    <div>是否还有书籍: {{ publishedBooksMessage }} ，库存：{{ author.books.length }} 本 </div>
+    <button @click="operate"> {{ publishedBooksOperate }} </button>
+    <div>02: 修改computed的值，从而更新依赖项</div>
+    <div>
+        <input v-model="fullName" />
         <div>
-            涉及API:
-            <a href="https://cn.vuejs.org/api/sfc-script-setup.html" target="_blank" rel="noopener noreferrer">script-setup</a>、
-            <a href="https://cn.vuejs.org/api/reactivity-core.html#ref" target="_blank" rel="noopener noreferrer">ref()</a>、
-            <a href="https://cn.vuejs.org/api/reactivity-core.html#reactive" target="_blank" rel="noopener noreferrer">reactive()</a>、
-            <a href="https://cn.vuejs.org/api/general.html#nexttick" target="_blank" rel="noopener noreferrer">nextTick()</a>
-            
-        </div>
-        <div>
-            <div>
-                <div>Demo 01:</div>
-                <div>是否还有书籍: {{ publishedBooksMessage }} ，库存：{{ author.books.length }} 本 </div>
-                <button @click="operate"> {{ publishedBooksOperate }} </button>
-            </div>
-            <div>
-                <div>Demo 02: 修改computed的值，从而更新依赖项</div>
-                <div>
-                    <input v-model="fullName" />
-                    <div>
-                        <div>First-Name: {{firstName}}</div>
-                        <div>Last-Name: {{lastName}}</div>
-                    </div>
-                </div>
-            </div>
+            <div>First-Name: {{firstName}}</div>
+            <div>Last-Name: {{lastName}}</div>
         </div>
     </div>
 </template>

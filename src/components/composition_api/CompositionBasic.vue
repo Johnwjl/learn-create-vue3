@@ -1,28 +1,10 @@
 <template>
-    <div class="case">
-        <div class="case-title">
-            CompositionBasic.vue
-            | 本例参阅：
-            <a href="https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html" target="_blank" rel="noopener noreferrer">响应式基础</a>
-        </div>
-        <div>
-            涉及API:
-            <a href="https://cn.vuejs.org/api/sfc-script-setup.html" target="_blank" rel="noopener noreferrer">script-setup</a>、
-            <a href="https://cn.vuejs.org/api/reactivity-core.html#ref" target="_blank" rel="noopener noreferrer">ref()</a>、
-            <a href="https://cn.vuejs.org/api/reactivity-core.html#reactive" target="_blank" rel="noopener noreferrer">reactive()</a>、
-            <a href="https://cn.vuejs.org/api/general.html#nexttick" target="_blank" rel="noopener noreferrer">nextTick()</a>
-            
-        </div>
-        <div>
-            <div>Demo:</div>
-            <button id="counter" @click="increment">
-                ref | {{ count }}
-            </button>
-            <button @click="state.count++">
-                reactive | {{ state.count }}
-            </button>
-        </div>
-    </div>
+    <button id="counter" @click="increment">
+        ref | {{ count }}
+    </button>
+    <button @click="state.count++">
+        reactive | {{ state.count }}
+    </button>
 </template>
   
 <script setup>

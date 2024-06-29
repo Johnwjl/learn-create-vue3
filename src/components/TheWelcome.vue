@@ -2,6 +2,8 @@
 import WelcomeItem from './WelcomeItem.vue'
 import CompositionBasic from './composition_api/CompositionBasic.vue'
 import ComputedDemo from './composition_api/ComputedDemo.vue'
+import WatchDemo from './composition_api/WatchDemo.vue'
+import CaseTemplate from './CaseTemplate.vue'
 </script>
 
 <template>
@@ -9,8 +11,45 @@ import ComputedDemo from './composition_api/ComputedDemo.vue'
   <WelcomeItem>
     <template #heading>组合式 API （Composition API）</template>
     
-    <CompositionBasic></CompositionBasic>
-    <ComputedDemo></ComputedDemo>
+    <CaseTemplate>
+      <template #caseName>CompositionBasic.vue</template>
+      <template #caseInfo>
+        <a href="https://cn.vuejs.org/guide/essentials/reactivity-fundamentals.html" target="_blank" rel="noopener noreferrer">响应式基础</a>
+      </template>
+      <template #apiInfo>
+          <a href="https://cn.vuejs.org/api/sfc-script-setup.html" target="_blank" rel="noopener noreferrer">script-setup</a>、
+          <a href="https://cn.vuejs.org/api/reactivity-core.html#ref" target="_blank" rel="noopener noreferrer">ref()</a>、
+          <a href="https://cn.vuejs.org/api/reactivity-core.html#reactive" target="_blank" rel="noopener noreferrer">reactive()</a>、
+          <a href="https://cn.vuejs.org/api/general.html#nexttick" target="_blank" rel="noopener noreferrer">nextTick()</a>
+      </template>
+      <CompositionBasic></CompositionBasic>
+    </CaseTemplate>
+    
+    <CaseTemplate>
+      <template #caseName>ComputedDemo.vue</template>
+      <template #caseInfo>
+        <a href="https://cn.vuejs.org/guide/essentials/computed.html" target="_blank" rel="noopener noreferrer">计算属性</a>
+      </template>
+      <template #apiInfo>
+          <a href="https://cn.vuejs.org/api/sfc-script-setup.html" target="_blank" rel="noopener noreferrer">script-setup</a>、
+          <a href="https://cn.vuejs.org/api/reactivity-core.html#ref" target="_blank" rel="noopener noreferrer">ref()</a>、
+          <a href="https://cn.vuejs.org/api/reactivity-core.html#reactive" target="_blank" rel="noopener noreferrer">reactive()</a>、
+          <a href="https://cn.vuejs.org/api/general.html#nexttick" target="_blank" rel="noopener noreferrer">nextTick()</a>
+      </template>
+      <ComputedDemo></ComputedDemo>
+    </CaseTemplate>
+
+    <CaseTemplate>
+      <template #caseName>WatchDemo.vue</template>
+      <template #caseInfo>
+        <a href="https://cn.vuejs.org/guide/essentials/watchers.html" target="_blank" rel="noopener noreferrer">侦听器</a>
+      </template>
+      <template #apiInfo>
+        <a href="https://cn.vuejs.org/api/reactivity-core.html#watch" target="_blank" rel="noopener noreferrer">watch</a>
+      </template>
+      <WatchDemo></WatchDemo>
+    </CaseTemplate>
+    
 
   </WelcomeItem>
 
